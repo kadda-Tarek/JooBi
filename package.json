@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/kadda-Tarek/JooBi",
+  "homepage": "https://www.joobi.ma",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
