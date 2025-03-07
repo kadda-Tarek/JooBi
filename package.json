@@ -5,12 +5,14 @@
   "type": "module",
   "homepage": "https://www.joobi.ma",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "dev": "vite",                
+    "build": "vite build",        
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0", 
+    "add-domain": "echo \"joobi.ma\" > dist/CNAME",  
+    "deploy": "npm run add-domain && gh-pages -d dist",
+    "bd": "npm run build && npm run deploy", 
+    "preview": "vite preview",     
+    "predeploy": "npm run build"   
   },
   "dependencies": {
     "react": "^18.2.0",
