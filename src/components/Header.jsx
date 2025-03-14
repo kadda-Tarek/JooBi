@@ -1,7 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
-import { brainwave } from "../assets";
+import { joobiLogo } from "../assets";
 import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
@@ -24,68 +24,79 @@ const Header = () => {
 
   const handleClick = () => {
     if (!openNavigation) return;
-
     enablePageScroll();
     setOpenNavigation(false);
   };
 
   return (
-    <div
-      className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
-        openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
+    <header
+      className={`fixed top-0 left-0 w-full z-[100] border-b border-gray-200 bg-blue-50/90 backdrop-blur-md transition-all duration-300 ${
+        openNavigation ? "bg-blue-50" : "bg-blue-50/90"
       }`}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <img src={brainwave} width={190} height={40} alt="Brainwave" />
+      <div className="mx-auto flex w-full items-center ">
+        {/* Logo aligné à gauche */}
+        <a className="block w-[10rem] lg:w-[12rem] ml-0" href="accueil">
+          <Link to="/">
+            {" "}
+            <img src={joobiLogo} width={160} height={35} alt="JooBi" />
+          </Link>
         </a>
 
+        {/* Navigation */}
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          } fixed top-[4rem] left-0 right-0 bottom-0 bg-blue-50 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+          <ul className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row lg:space-x-5 lg:px-8">
             {navigation.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-                  item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                  item.url === pathname.hash
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1/50"
-                } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-              >
-                {item.title}
-              </a>
+              <li key={item.id} className="px-4 py-4 md:py-6 lg:p-0">
+                <a
+                  href={item.url}
+                  onClick={handleClick}
+                  className={`block text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 lg:text-base ${
+                    item.url === pathname.hash ? "text-blue-600" : ""
+                  }`}
+                >
+                  {item.title}
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
 
+          {/* Ajout du composant HamburgerMenu ici */}
           <HamburgerMenu />
         </nav>
 
-        <a
-          href="#signup"
-          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
-        >
-          New account
-        </a>
-        <Button className="hidden lg:flex" href="#login">
-          Sign in
-        </Button>
+        {/* Boutons à droite bien alignés */}
+        <div className="hidden lg:flex lg:items-center lg:space-x-4">
+          <a
+            href="#signup"
+            className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 lg:text-base"
+          >
+            Créer un compte
+          </a>
+          <Link to="/login">
+            <Button
+              className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2"
+              href="#login"
+            >
+              Se connecter
+            </Button>
+          </Link>
+        </div>
 
+        {/* Bouton du menu mobile */}
         <Button
           className="ml-auto lg:hidden"
-          px="px-3"
+          px="px-2"
           onClick={toggleNavigation}
         >
           <MenuSvg openNavigation={openNavigation} />
         </Button>
       </div>
-    </div>
+    </header>
   );
 };
 

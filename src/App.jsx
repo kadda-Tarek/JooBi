@@ -1,29 +1,31 @@
-import ButtonGradient from "./assets/svg/ButtonGradient";
-import Benefits from "./components/Benefits";
-import Collaboration from "./components/Collaboration";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Pricing from "./components/Pricing";
-import Roadmap from "./components/Roadmap";
-import Services from "./components/Services";
+import FooterSection from "./components/FooterSection";
+import ButtonGradient from "./assets/svg/ButtonGradient";
+import HomePage from "./pages/HomePage"; // Page principale
+import LoginPage from "./pages/LoginPage"; // Autre page exemple
 
 const App = () => {
   return (
-    <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+    <Router>
+      <div className="flex flex-col min-h-screen"> 
+        {/* Header toujours affiché */}
         <Header />
-        <Hero />
-        <Benefits />
-        <Collaboration />
-        <Services />
-        <Pricing />
-        <Roadmap />
-        <Footer />
+
+        {/* Contenu de la page qui change */}
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+          </Routes>
+        </main>
+
+        {/* Footer toujours affiché */}
+        <FooterSection />
       </div>
 
       <ButtonGradient />
-    </>
+    </Router>
   );
 };
 
