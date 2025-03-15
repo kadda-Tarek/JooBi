@@ -62,7 +62,11 @@ const Header = () => {
                 </a>
               </li>
             ))}
-            <li>{window.innerWidth < 1024 ? <LoginBlock /> : null}</li>
+            <li>
+              {window.innerWidth < 1024 ? (
+                <LoginBlock handleClick={handleClick} />
+              ) : null}
+            </li>
           </ul>
 
           {/* Ajout du composant HamburgerMenu ici */}
@@ -70,7 +74,7 @@ const Header = () => {
         </nav>
 
         {/* Affichage de la version desktop du LoginBlock */}
-        {window.innerWidth >= 1024 ? <LoginBlock /> : null}
+        {window.innerWidth >= 1024 ? <LoginBlock setOpenNavigation /> : null}
 
         {/* Bouton du menu mobile */}
         <Button
