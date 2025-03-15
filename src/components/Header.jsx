@@ -1,12 +1,12 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-
 import { joobiLogo } from "../assets";
 import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
+import { LoginBlock } from "./design/LoginBlock";
 
 const Header = () => {
   const pathname = useLocation();
@@ -38,7 +38,6 @@ const Header = () => {
         {/* Logo aligné à gauche */}
         <a className="block w-[10rem] lg:w-[12rem] ml-0" href="accueil">
           <Link to="/">
-            {" "}
             <img src={joobiLogo} width={160} height={35} alt="JooBi" />
           </Link>
         </a>
@@ -63,29 +62,15 @@ const Header = () => {
                 </a>
               </li>
             ))}
+            <li>{window.innerWidth < 1024 ? <LoginBlock /> : null}</li>
           </ul>
 
           {/* Ajout du composant HamburgerMenu ici */}
           <HamburgerMenu />
         </nav>
 
-        {/* Boutons à droite bien alignés */}
-        <div className="hidden lg:flex lg:items-center lg:space-x-4">
-          <a
-            href="#signup"
-            className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 lg:text-base"
-          >
-            Créer un compte
-          </a>
-          <Link to="/login">
-            <Button
-              className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2"
-              href="#login"
-            >
-              Se connecter
-            </Button>
-          </Link>
-        </div>
+        {/* Affichage de la version desktop du LoginBlock */}
+        {window.innerWidth >= 1024 ? <LoginBlock /> : null}
 
         {/* Bouton du menu mobile */}
         <Button

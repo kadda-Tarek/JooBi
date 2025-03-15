@@ -1,4 +1,5 @@
 import React from "react";
+import { bottomWave } from "../assets";
 
 const ProjetSection = () => {
   return (
@@ -6,21 +7,6 @@ const ProjetSection = () => {
       className="relative pb-0 pt-[26px] md:pt-[50px] xl:pt-[106px] bg-white text-black"
       id="szpt3pr"
     >
-      <div className="absolute bottom-[-120px] right-0 md:bottom-[-220px] xl:bottom-[-230px]">
-        <svg
-          className="h-[162px] md:h-[300px] xl:h-[400px]"
-          viewBox="0 0 135 463"
-        >
-          <use
-            href="/embed/assets/10-half-circles-shape-right.svg#halfCirclesShapeRight"
-            style={{
-              "--svg-color": "var(--primary-color)",
-              "--svg-color2": "var(--accent-color)",
-            }}
-          />
-        </svg>
-      </div>
-
       <div className="relative z-50 mx-auto w-full max-w-[1206px] px-[18px]">
         <div className="flex flex-col gap-8 md:flex-row md:gap-6">
           <div className="w-full md:w-5/12">
@@ -105,6 +91,11 @@ const ProjetSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Image du bas */}
+      <div className="absolute bottom-[-80px] left-0 w-full sm:bottom-[-100px] lg:bottom-[-130px] z-10">
+        <img src={bottomWave} alt="Bottom Shape" className="w-full h-auto" />
       </div>
     </section>
   );

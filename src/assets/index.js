@@ -24,6 +24,7 @@ import slack from "./collaboration/slack.png";
 
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
+import google from "./socials/google.svg"
 import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
@@ -32,6 +33,7 @@ import backgroundWaveShape from "./background-wave-shape.svg";
 import heroShape from "./hero-shape.svg";
 import circlesShape from "./half-circles-shape-left.svg";
 import bottomWave from "./bottom-hero-wave.svg";
+import bottomWaveRight from "./bottomWaveRight.svg";
 import joobiLogo from "./joobi-logo.png";
 import iconLogo from "./icon-logo.png";
 
@@ -60,6 +62,7 @@ export {
   slack,
   discordBlack,
   facebook,
+  google,
   instagram,
   telegram,
   twitter,
@@ -67,6 +70,7 @@ export {
   heroShape,
   circlesShape,
   bottomWave,
+  bottomWaveRight,
   joobiLogo,
   iconLogo,
 };

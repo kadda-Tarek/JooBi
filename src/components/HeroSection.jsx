@@ -5,10 +5,10 @@ const HeroSection = () => {
   return (
     <section
       id="accueil"
-      className="relative bg-white pt-[80px] py-11 pb-48 md:pb-[200px] flex items-center justify-center"
+      className="relative bg-white pt-[120px] py-11 pb-48 md:pb-[200px] flex items-center justify-center"
     >
       {/* SVG en Background gauche */}
-      <div className="absolute left-0 top-10 md:-top-20 lg:top-[-170px] w-[135px] h-[463px]">
+      <div className="absolute left-0  top-[80px] w-[359px] h-[600px] md:w-[400px] md:h-[625px] lg:w-[650px] lg:h-[700px]">
         <img
           src={circlesShape}
           alt="Half Circles Left"
@@ -17,7 +17,7 @@ const HeroSection = () => {
       </div>
 
       {/* SVG en Background côté droit */}
-      <div className="absolute right-0 bottom-0 top-0 w-[359px] h-[600px] md:w-[400px] md:h-[625px] lg:w-[650px] lg:h-[700px]">
+      <div className="absolute right-0 top-[80px] w-[359px] h-[600px] md:w-[400px] md:h-[625px] lg:w-[650px] lg:h-[700px]">
         <img
           src={heroShape}
           alt="Background Shape"
@@ -65,7 +65,7 @@ const HeroSection = () => {
       </div>
 
       {/* Image du bas */}
-      <div className="absolute bottom-[-80px] left-0 w-full sm:bottom-[-100px] lg:bottom-[-130px]">
+      <div className="absolute bottom-[-80px] left-0 w-full sm:bottom-[-100px] lg:bottom-[-130px] z-10">
         <img src={bottomWave} alt="Bottom Shape" className="w-full h-auto" />
       </div>
     </section>

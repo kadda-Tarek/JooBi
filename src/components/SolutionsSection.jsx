@@ -1,26 +1,20 @@
 import { solutions } from "../constants";
-import { backgroundWaveShape, circlesShape } from "../assets";
+import { backgroundWaveShape, bottomWave, circlesShape } from "../assets";
 
 const SolutionsSection = () => {
   return (
-    <section id="services" className="relative bg-white py-[50px] xl:pb-[106px]">
+    <section
+      id="services"
+      className="relative bg-white py-[50px] xl:pb-[106px]"
+    >
       {/* Background SVG */}
-      <span className="absolute left-0 top-[140px] flex h-full w-full items-center">
+      <span className="absolute left-0 top-[140px] flex h-full w-full items-center z-10">
         <img
           src={backgroundWaveShape}
           alt="Background Wave"
           className="h-full w-full object-cover object-center md:h-auto"
         />
       </span>
-
-      {/* SVG en Background gauche */}
-      <div className="absolute left-0 top-10 md:-top-20 lg:top-[-170px] w-[135px] h-[463px]">
-        <img
-          src={circlesShape}
-          alt="Half Circles Left"
-          className="h-[162px] md:h-[300px] xl:h-[400px]"
-        />
-      </div>
 
       {/* Contenu principal */}
       <div className="relative z-50 mx-auto w-full max-w-[1206px] px-[18px] text-center">
@@ -56,6 +50,11 @@ const SolutionsSection = () => {
             </div>
           ))}
         </div>
+      </div>
+      
+      {/* Image du bas */}
+      <div className="absolute bottom-[-80px] left-0 w-full sm:bottom-[-100px] lg:bottom-[-130px] z-10">
+        <img src={bottomWave} alt="Bottom Shape" className="w-full h-auto" />
       </div>
     </section>
   );

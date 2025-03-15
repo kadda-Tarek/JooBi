@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { bottomWaveRight } from "../assets";
 
 const FAQFormSection = () => {
   const [faqOpen, setFaqOpen] = useState({});
@@ -11,29 +12,18 @@ const FAQFormSection = () => {
   };
 
   return (
-    <section id="contact" className="relative -mb-5 pb-0 pt-[74px] md:pt-[113px] bg-white text-black">
-      <div className="absolute bottom-[-110px] right-0 z-50 md:bottom-[-270px]">
-        <svg
-          className="h-[162px] md:h-[300px] xl:h-[400px]"
-          viewBox="0 0 135 463"
-        >
-          <use
-            href="/embed/assets/10-half-circles-shape-right.svg#halfCirclesShapeRight"
-            style={{
-              "--svg-color": "var(--primary-color)",
-              "--svg-color2": "var(--accent-color)",
-            }}
-          />
-        </svg>
-      </div>
-      <div className="absolute left-0 top-[-50px] w-full sm:top-[-110px] lg:top-[-290px]">
+    <section
+      id="contact"
+      className="relative -mb-5 pb-0 pt-[74px] md:pt-[113px] bg-white text-black"
+    >
+      {/* Image du bas */}
+      <div className="absolute bottom-[-80px] left-0 w-full sm:bottom-[-100px] lg:bottom-[-130px] z-10">
         <img
-          src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/6d4741aa-dbb2-4242-ee05-27a3519e2d00/publicContain"
-          alt="Illustration"
-          className="w-full"
+          src={bottomWaveRight}
+          alt="Bottom Shape"
+          className="w-full h-auto"
         />
       </div>
-
       <div className="relative z-50 mx-auto w-full max-w-[1206px] px-[18px]">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div>

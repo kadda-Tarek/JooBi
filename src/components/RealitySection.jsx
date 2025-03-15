@@ -1,16 +1,12 @@
-import React from 'react';
+import React from "react";
+import { bottomWave } from "../assets";
 
 const RealitySection = () => {
   return (
-    <section className="relative pb-12 pt-[250px] md:pb-[100px] bg-white text-black" id="ss1j1o9">
-      <div className="absolute top-[-120px] w-full">
-        <img
-          src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/6d4741aa-dbb2-4242-ee05-27a3519e2d00/publicContain"
-          alt=""
-          className="w-full"
-          data-dont-replace=""
-        />
-      </div>
+    <section
+      className="relative pb-12 pt-[0px] md:pb-[100px] bg-white text-black"
+      id="ss1j1o9"
+    >
       <div className="relative z-50 mx-auto w-full max-w-[1206px] px-[18px]">
         <div className="flex flex-col gap-8 md:flex-row md:gap-6">
           <div className="w-full md:w-5/12">
@@ -19,10 +15,18 @@ const RealitySection = () => {
                 Transformez vos projets en réalité avec JooBi
               </h2>
               <p className="mt-3.5 w-full max-w-full text-center text-sm font-normal leading-[22px] md:mt-6 md:max-w-[470px] md:text-left md:text-base md:leading-[26px] lg:text-lg">
-                Notre plateforme vous connecte instantanément avec des artisans qualifiés en plomberie, électricité, chauffage et climatisation. Besoin d'une intervention d'urgence ? JooBi garantit un accès rapide à des professionnels fiables qui comprennent vos besoins spécifiques.
+                Notre plateforme vous connecte instantanément avec des artisans
+                qualifiés en plomberie, électricité, chauffage et climatisation.
+                Besoin d'une intervention d'urgence ? JooBi garantit un accès
+                rapide à des professionnels fiables qui comprennent vos besoins
+                spécifiques.
               </p>
               <p className="mb-6 mt-3.5 w-full max-w-full text-center text-sm font-normal leading-[22px] md:mb-12 md:mt-6 md:max-w-[470px] md:text-left md:text-base md:leading-[26px] lg:text-lg">
-                Grâce à notre interface multilingue, disponible en français, anglais et arabe, nos services sont accessibles à un large public. Explorez notre réseau d'artisans triés sur le volet, lisez des avis authentiques et choisissez le partenaire idéal pour vos projets.
+                Grâce à notre interface multilingue, disponible en français,
+                anglais et arabe, nos services sont accessibles à un large
+                public. Explorez notre réseau d'artisans triés sur le volet,
+                lisez des avis authentiques et choisissez le partenaire idéal
+                pour vos projets.
               </p>
               <ul className="flex items-center justify-center md:justify-start">
                 <li>
@@ -42,10 +46,15 @@ const RealitySection = () => {
               alt=""
               className="ml-0 h-full w-full object-contain xl:ml-10"
               data-landingsite-gallery-type="illustration"
-              data-media="{&quot;id&quot;:&quot;2da20e80-a564-11ef-8539-0242ac140003&quot;,&quot;src&quot;:&quot;iconscout&quot;,&quot;type&quot;:&quot;illustration&quot;}"
+              data-media='{"id":"2da20e80-a564-11ef-8539-0242ac140003","src":"iconscout","type":"illustration"}'
             />
           </div>
         </div>
+      </div>
+
+      {/* Image du bas */}
+      <div className="absolute bottom-[-80px] left-0 w-full sm:bottom-[-100px] lg:bottom-[-130px] z-10">
+        <img src={bottomWave} alt="Bottom Shape" className="w-full h-auto" />
       </div>
     </section>
   );

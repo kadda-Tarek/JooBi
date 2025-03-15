@@ -1,9 +1,10 @@
 import React from "react";
+import { bottomWave } from "../assets";
 
 const TransformationSection = () => {
   return (
     <section
-      className="relative  pt-8 md:pb-[50px] md:pt-[50px] lg:pb-[100px] bg-white "
+      className="relative pt-8 md:pb-[50px] md:pt-[50px] lg:pb-[100px] bg-white "
       id="smbkhq"
     >
       <div className="absolute right-0 top-[-100px] hidden lg:block lg:top-[-160px]">
@@ -59,6 +60,11 @@ const TransformationSection = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Image du bas */}
+      <div className="absolute bottom-[-80px] left-0 w-full sm:bottom-[-100px] lg:bottom-[-130px] z-10">
+        <img src={bottomWave} alt="Bottom Shape" className="w-full h-auto" />
       </div>
     </section>
   );

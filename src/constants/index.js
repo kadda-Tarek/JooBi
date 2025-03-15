@@ -22,29 +22,57 @@ export const navigation = [
   {
     id: "0",
     title: "Accueil",
-    url: "#accueil",
+    url: "/#accueil",
   },
   {
     id: "1",
     title: "Avantages",
-    url: "#avantages",
+    url: "/#avantages",
   },
   {
     id: "2",
     title: "Services",
-    url: "#services",
+    url: "/#services",
   },
   {
     id: "3",
     title: "Interfaces",
-    url: "#interfaces",
+    url: "/#interfaces",
   },
   {
     id: "4",
     title: "Contact",
-    url: "#contact",
+    url: "/#contact",
   },
 ];
+
+export const services = {
+  title:
+    " Découvrez la simplicité de la mise en relation avec des artisans qualifiés grâce à JooBi",
+  items: [
+    {
+      img: "https://cdni.iconscout.com/illustration/premium/thumb/home-maintenance-13101201-10674721.png",
+      alt: "Comparaison des artisans",
+      title: "Comparaison des artisans",
+      description:
+        "Nous vous permettons de comparer les artisans, de lire des avis clients et de choisir celui qui correspond le mieux à vos attentes.",
+    },
+    {
+      img: "https://cdni.iconscout.com/illustration/premium/thumb/home-maintenance-13101200-10674720.png",
+      alt: "Service Multilingue",
+      title: "Service Multilingue",
+      description:
+        "Grâce à notre service en français, anglais et arabe, nous garantissons un accès à notre plateforme pour tous.",
+    },
+    {
+      img: "https://cdni.iconscout.com/illustration/premium/thumb/home-maintenance-13101203-10674723.png",
+      alt: "Planifiez vos projets",
+      title: "Planifiez vos Projets",
+      description:
+        "Avec JooBi, vous pouvez facilement planifier vos projets, demander des devis et entrer en contact avec des artisans de confiance.",
+    },
+  ],
+};
 
 export const solutions = {
   title: "Services de mise en relation innovantes",

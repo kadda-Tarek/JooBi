@@ -1,15 +1,12 @@
 import React from "react";
+import { bottomWave } from "../assets";
 
 const RenovationSection = () => {
   return (
-    <section className="relative pb-[50px] lg:pb-[225px] bg-white text-black" id="s3xit2w">
-      <div className="-mb-20 -mt-[30px] w-full md:-mt-2.5 lg:-mt-20 lg:mb-[-140px]">
-        <img
-          src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/ebf8473e-3c54-4ca0-410d-ec558c78f200/publicContain"
-          alt=""
-          className="w-full"
-        />
-      </div>
+    <section
+      className="relative pb-[50px] lg:pb-[225px] bg-white text-black"
+      id="s3xit2w"
+    >
       <div className="relative z-50 mx-auto w-full max-w-[1206px] px-[18px] pt-24">
         <div className="flex flex-col-reverse gap-8 md:flex-row md:gap-6">
           <div className="w-full md:w-7/12">
@@ -27,7 +24,10 @@ const RenovationSection = () => {
                 Transformez vos projets de rénovation
               </h2>
               <p className="mt-3.5 w-full max-w-full text-center text-sm font-normal leading-[22px] text-black md:mt-6 md:max-w-[470px] md:text-left md:text-base md:leading-[26px] lg:text-lg">
-                Avec JooBi, trouvez rapidement des artisans spécialisés en plomberie, électricité, chauffage et climatisation pour tous vos besoins de rénovation, qu'il s'agisse d'une urgence ou d'un projet à long terme.
+                Avec JooBi, trouvez rapidement des artisans spécialisés en
+                plomberie, électricité, chauffage et climatisation pour tous vos
+                besoins de rénovation, qu'il s'agisse d'une urgence ou d'un
+                projet à long terme.
               </p>
               <ul className="mt-4 border-t border-solid border-[#e0e0e0] pt-5 md:mt-5 md:pt-8">
                 <li className="mb-3.5 lg:mb-[26px]">
@@ -40,7 +40,8 @@ const RenovationSection = () => {
                         Service Multilingue
                       </h4>
                       <p className="text-sm font-normal leading-6 text-black md:text-base">
-                        Naviguez facilement grâce à notre interface en français, anglais et arabe.
+                        Naviguez facilement grâce à notre interface en français,
+                        anglais et arabe.
                       </p>
                     </div>
                   </div>
@@ -55,7 +56,8 @@ const RenovationSection = () => {
                         Artisans Vérifiés
                       </h4>
                       <p className="text-sm font-normal leading-6 text-black md:text-base">
-                        Découvrez des professionnels qualifiés, prêts à réaliser vos idées avec expertise.
+                        Découvrez des professionnels qualifiés, prêts à réaliser
+                        vos idées avec expertise.
                       </p>
                     </div>
                   </div>
@@ -70,7 +72,8 @@ const RenovationSection = () => {
                         Comparaison Facile
                       </h4>
                       <p className="text-sm font-normal leading-6 text-black md:text-base">
-                        Comparez les profils et lisez les avis clients pour choisir le prestataire idéal.
+                        Comparez les profils et lisez les avis clients pour
+                        choisir le prestataire idéal.
                       </p>
                     </div>
                   </div>
@@ -79,6 +82,11 @@ const RenovationSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Image du bas */}
+      <div className="absolute bottom-[-80px] left-0 w-full sm:bottom-[-100px] lg:bottom-[-130px] z-10">
+        <img src={bottomWave} alt="Bottom Shape" className="w-full h-auto" />
       </div>
     </section>
   );

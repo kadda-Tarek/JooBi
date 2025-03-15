@@ -23,13 +23,6 @@ const FooterSection = () => {
         {/* Container for the footer content */}
         <div className="relative z-50 mx-auto w-full max-w-[1206px] px-[18px]">
           <div className="flex flex-wrap pb-7 md:pb-[70px] lg:flex-nowrap">
-            <div className="absolute left-0 top-[-50px] w-full sm:top-[-110px] lg:top-[-290px]">
-              <img
-                src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/6d4741aa-dbb2-4242-ee05-27a3519e2d00/publicContain"
-                alt="Illustration"
-                className="w-full"
-              />
-            </div>
             {/* JooBi Logo and Description */}
             <div className="mb-9 w-full md:mb-6 lg:mb-0 lg:w-4/12">
               <div className="w-full max-w-full lg:max-w-[330px]">
