@@ -1,5 +1,5 @@
 import React from "react";
-import { bottomWave } from "../assets";
+import { bottomWave } from "../../assets";
 
 const TransformationSection = () => {
   return (

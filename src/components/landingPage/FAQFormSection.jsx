@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { bottomWaveRight } from "../assets";
+import { bottomWaveRight } from "../../assets";
 
 const FAQFormSection = () => {
   const [faqOpen, setFaqOpen] = useState({});

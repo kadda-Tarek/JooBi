@@ -1,5 +1,5 @@
 import React from "react";
-import { heroShape, bottomWave, circlesShape } from "../assets";
+import { heroShape, bottomWave, circlesShape } from "../../assets";
 
 const HeroSection = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { facebook, google } from "../assets";
+import { facebook, google } from "../../assets";
 
 export default function RegisterComponent() {
   return (

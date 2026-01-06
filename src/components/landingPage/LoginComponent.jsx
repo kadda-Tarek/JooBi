@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { facebook, google } from "../assets";
+import { facebook, google } from "../../assets";
 
 export default function LoginComponent() {
   return (

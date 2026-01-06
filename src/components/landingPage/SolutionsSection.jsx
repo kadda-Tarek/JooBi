@@ -1,5 +1,5 @@
-import { solutions } from "../constants";
-import { backgroundWaveShape, bottomWave, circlesShape } from "../assets";
+import { solutions } from "../../constants";
+import { backgroundWaveShape, bottomWave } from "../../assets";
 
 const SolutionsSection = () => {
   return (

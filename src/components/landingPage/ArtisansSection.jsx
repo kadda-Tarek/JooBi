@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { bottomWave } from "../assets";
-import { services } from "../constants";
+import { bottomWave } from "../../assets";
+import { services } from "../../constants";
 
 const ArtisansSection = () => {
   // Déclare un état pour suivre l'index de l'image active

@@ -1,9 +1,9 @@
 import { useLocation, Link } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import { joobiLogo } from "../assets";
-import { navigation } from "../constants";
+import { joobiLogo } from "../../assets";
+import { navigation } from "../../constants";
 import Button from "./Button";
-import MenuSvg from "../assets/svg/MenuSvg";
+import MenuSvg from "../../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
 import { LoginBlock } from "./design/LoginBlock";

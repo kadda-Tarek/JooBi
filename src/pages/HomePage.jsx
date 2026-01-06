@@ -1,11 +1,11 @@
-import HeroSection from "../components/HeroSection";
-import ArtisansSection from "../components/ArtisansSection";
-import TransformationSection from "../components/TransformationSection";
-import SolutionsSection from "../components/SolutionsSection";
-import ProjetSection from "../components/ProjetSection";
-import RenovationSection from "../components/RenovationSection";
-import RealitySection from "../components/RealitySection";
-import FAQFormSection from "../components/FAQFormSection";
+import HeroSection from "../components/landingPage/HeroSection";
+import ArtisansSection from "../components/landingPage/ArtisansSection";
+import TransformationSection from "../components/landingPage/TransformationSection";
+import SolutionsSection from "../components/landingPage/SolutionsSection";
+import ProjetSection from "../components/landingPage/ProjetSection";
+import RenovationSection from "../components/landingPage/RenovationSection";
+import RealitySection from "../components/landingPage/RealitySection";
+import FAQFormSection from "../components/landingPage/FAQFormSection";
 
 const HomePage = () => {
   return (
